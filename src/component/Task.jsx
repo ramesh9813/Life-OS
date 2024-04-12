@@ -1,28 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 
 const Task = () => {
-  const inputsRef = useRef([]);  
- 
+  const [inputs, setInputs] = useState([{ id: 1, value: '' }]);
+
+  // Function to handle key press events
   const handleKeyPress = (index, e) => {
     if (e.key === 'Enter') {
-      e.preventDefault();  
+      e.preventDefault(); // Prevent default behavior of Enter key
+      
+      // If the last input is filled, add a new input field
+      if (index === inputs.length - 1 && inputs[index].value !== '') {
+        setInputs([...inputs, { id: inputs.length + 1, value: '' }]);
+      }
 
-      if (inputsRef.current[index + 1]) {
-        inputsRef.current[index + 1].focus();
+      // Focus on the next input element if it exists
+      const nextIndex = index + 1;
+      if (inputs[nextIndex]) {
+        document.getElementById(`input-${nextIndex}`).focus();
       }
     }
+  };
+
+  // Function to handle input value changes
+  const handleInputChange = (index, value) => {
+    const newInputs = [...inputs];
+    newInputs[index].value = value;
+    setInputs(newInputs);
   };
 
   return (
     <>
       <div className="input_class">
-        {[...Array(9)].map((_, index) => (
+        {inputs.map((input, index) => (
           <input
-            key={index}
+            key={input.id}
             type="text"
             className="underline"
+            placeholder="Enter your text"
+            value={input.value}
+            id={`input-${index}`}
+            onChange={(e) => handleInputChange(index, e.target.value)} // Handle input value changes
             onKeyPress={(e) => handleKeyPress(index, e)} // Handle key press events
-            ref={(el) => (inputsRef.current[index] = el)} // Store reference to the input element
           />
         ))}
       </div>
