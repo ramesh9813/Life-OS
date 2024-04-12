@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 const Task = () => {
-  const [inputs, setInputs] = useState([{ id: 1, value: '' }]);
+  const initialInputs = [...Array(10)].map((_, index) => ({ id: index, value: '' }));
+  const [inputs, setInputs] = useState(initialInputs);
 
   // Function to handle key press events
   const handleKeyPress = (index, e) => {
@@ -10,7 +11,7 @@ const Task = () => {
       
       // If the last input is filled, add a new input field
       if (index === inputs.length - 1 && inputs[index].value !== '') {
-        setInputs([...inputs, { id: inputs.length + 1, value: '' }]);
+        setInputs([...inputs, { id: inputs.length, value: '' }]);
       }
 
       // Focus on the next input element if it exists
