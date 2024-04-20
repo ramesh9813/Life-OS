@@ -10,13 +10,11 @@ function App() {
  
   return (
     <>
-     <div className="container mt-5 w-100">
       <Header/>
       <LeftSideBar/>
       <RightSideBar/>
       <DayPicker/>    
       <TaskList/>
-     </div>
     </>
   )
 }

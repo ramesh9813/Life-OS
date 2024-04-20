@@ -26,10 +26,7 @@
   .content {
     padding: 10px;
   }
-  .datepicker{
-    height: 75vh;
-  }
-  
+
   .row {
     display: flex;
     justify-content: space-between;
@@ -42,7 +39,6 @@
   
   .scrollable-content {
     max-height: 75vh; /* Set the specific height for each column */
-     
     padding: 6px;
   }
   
