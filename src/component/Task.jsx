@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../style/task.css'
 
 const Task = (props) => {
   const initialInputs = [...Array(10)].map((_, index) => ({ id: index, value: '' }));

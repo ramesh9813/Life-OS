@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+  }
+/* Header component */
+
+
+/* task component styling */
+.input_class{
+    display: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+    width:600px
+}

@@ -2,13 +2,13 @@
 /* hidden component  */
 .hidden-component {
     position: fixed;
-    left: -335px; /* Initially hide it on the left side */
+    left: -350px; /* Initially hide it on the left side */
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
-    transition: left 0.3s ease-in-out;
+    transition: left 0.4s ease-in-out;
     z-index: 999;
   }
   

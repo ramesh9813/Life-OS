@@ -1,0 +1,12 @@
+/* tasklist component styling */
+.day-task-wrapper{
+    margin: 1%;
+}
+
+.underline {
+    border: none;
+    border-bottom: 1px solid black; /* Change the color as needed */
+    outline: none;
+    width: 100%;
+    font-size: 1.5rem;
+}

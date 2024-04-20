@@ -5,7 +5,7 @@
     height: 100%;
     width: 50vw;
     background-color: #f0f0f0;
-    transition: right 0.3s ease-in-out;
+    transition: right 0.4s ease-in-out;
     height: 93vh;
     z-index: 999;
   }
