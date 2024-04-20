@@ -1,0 +1,41 @@
+.profile {
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-menu {
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    width: 150px;
+  }
+  
+  .profile-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .profile-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  

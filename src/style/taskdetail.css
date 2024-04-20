@@ -1,0 +1,43 @@
+.task-detail {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-row {
+    margin-bottom: 20px;
+  }
+  
+  .task-row label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .task-row input[type="text"],
+  .task-row textarea,
+  .task-row select,
+  .task-row input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .task-row textarea {
+    height: 100px;
+  }
+  
+  .task-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .task-detail-item label {
+    margin-left: 5px;
+  }
+  

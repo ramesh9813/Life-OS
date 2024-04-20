@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import '../style/login.css'
+import { Link, useNavigate } from 'react-router-dom';
+
+import '../style/login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -25,20 +27,28 @@ const Login = () => {
   return (
     <div>
       {loggedIn ? (
-        <div>
-          <p>Welcome, {username}!</p>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
+         <useNavigate to="/" />
       ) : (
-          <div class="login-container">
-            <h2>Login</h2>
-            <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-            <br />
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <br />
-            <button onClick={handleLogin}>Login</button>
-          </div>
-
+        <div className="login-container">
+          <h2>Login</h2>
+          <input 
+              type="text" 
+              placeholder="Username" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+          />
+          <br />
+          <input 
+              type="password" 
+              placeholder="Password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+          />
+          <br />
+          <button onClick={handleLogin}>Login</button>
+          <p>Forgot Password?<Link to="/forgetpassword">Click me</Link></p>
+          <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+        </div>
       )}
     </div>
   );

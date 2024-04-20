@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Profile from '../auth/Profile';
+import '../style/header.css'
 
 const Header = () => {
    
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <div className="header-container">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,8 +22,11 @@ const Header = () => {
         <Link to="/login" className='btn btn-outline-primary'>
             Login
         </Link>
+         
+        <Profile/>
       </div>
     </nav>
+   </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../style/signup.css'
 
 const SignUp = () => {
@@ -16,7 +17,7 @@ const SignUp = () => {
 
   return (
     <div class="signup-container">
-    <h2>Sign Up</h2>
+    <h3>Sign Up</h3>
     <form onSubmit={handleSubmit}>
         <label>
             Gmail:
@@ -27,11 +28,7 @@ const SignUp = () => {
             Full Name:
             <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
         </label>
-        <br />
-        <label>
-            Address:
-            <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} required />
-        </label>
+         
         <br />
         <label>
             Sex:
@@ -48,10 +45,10 @@ const SignUp = () => {
             <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} required />
         </label>
         <br />
+        <p>I have an account <Link to="/login">Login</Link></p>
         <button type="submit">Sign Up</button>
     </form>
 </div>
-
   );
 };
 
