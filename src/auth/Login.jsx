@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../style/login.css'
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -29,23 +30,15 @@ const Login = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <div>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <br />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <br />
-          <button onClick={handleLogin}>Login</button>
-        </div>
+          <div class="login-container">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <br />
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <br />
+            <button onClick={handleLogin}>Login</button>
+          </div>
+
       )}
     </div>
   );
