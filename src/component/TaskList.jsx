@@ -4,7 +4,10 @@ import Task from './Task'
 const TaskList = () => {
   return (
     <>
-    <Task/>
+    <div className="d-flex justify-content-center day-task-wrapper">
+    <Task value="Planned task"/>
+    <Task value="Performed task "/>
+    </div>
     </>
   )
 }

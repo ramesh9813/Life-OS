@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const Task = () => {
+const Task = (props) => {
   const initialInputs = [...Array(10)].map((_, index) => ({ id: index, value: '' }));
   const [inputs, setInputs] = useState(initialInputs);
 
   // Function to handle key press events
   const handleKeyPress = (index, e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter'||e.keyCode == '40') {
       e.preventDefault(); // Prevent default behavior of Enter key
       
       // If the last input is filled, add a new input field
@@ -15,7 +15,7 @@ const Task = () => {
       }
 
       // Focus on the next input element if it exists
-      const nextIndex = index + 1;
+      const nextIndex = index +1;
       if (inputs[nextIndex]) {
         document.getElementById(`input-${nextIndex}`).focus();
       }
@@ -31,20 +31,27 @@ const Task = () => {
 
   return (
     <>
+     <div className="left-container m-3 border">
+      <h3 className='d-flex justify-content-center'>{props.value}</h3>
+      <hr />
       <div className="input_class">
         {inputs.map((input, index) => (
-          <input
+            <div className='d-flex'>
+            <p className='d-flex align-bottom justify-content-center ms-5'>{index+1}. </p>
+            <input
             key={input.id}
             type="text"
-            className="underline"
-            placeholder="Enter your text"
+            className="underline ps-3"
+            // placeholder={index+1}
             value={input.value}
             id={`input-${index}`}
             onChange={(e) => handleInputChange(index, e.target.value)} // Handle input value changes
             onKeyPress={(e) => handleKeyPress(index, e)} // Handle key press events
-          />
+            />
+            </div>
         ))}
       </div>
+    </div>
     </>
   );
 };

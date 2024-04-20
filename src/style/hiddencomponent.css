@@ -1,0 +1,47 @@
+
+/* hidden component  */
+.hidden-component {
+    position: fixed;
+    left: -300px; /* Initially hide it on the left side */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .hidden-component.visible {
+    left: 0; /* Show it from the left side */
+  }
+  
+  .toggle-arrow {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .content {
+    padding: 10px;
+  }
+  .datepicker{
+    height: 75vh;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col {
+    flex-grow: 1;
+    overflow-y: auto; /* Add scrollable feature */
+  }
+  
+  .scrollable-content {
+    max-height: 75vh; /* Set the specific height for each column */
+     
+    padding: 6px;
+  }
+  
