@@ -1,12 +1,13 @@
 .sidebar {
     position: fixed;
     top: 3%;
-    right: -100px; /* Initially hide it on the right side */
+    right: -690px;  
     height: 100%;
     width: 50vw;
     background-color: #f0f0f0;
-    transition: right 0.5s ease-in-out;
+    transition: right 0.3s ease-in-out;
     height: 93vh;
+    z-index: 999;
   }
   
   .sidebar.open {
@@ -32,7 +33,7 @@
   .toggle-button {
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: 700px;
     transform: translateY(-50%);
     cursor: pointer;
   }

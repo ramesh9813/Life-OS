@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
  
-import '../style/hiddencomponent.css';
+import '../style/leftsidebar.css'
 
-const HiddenComponent = () => {
+const LeftSideBar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -15,8 +15,6 @@ const HiddenComponent = () => {
   ];
    const days = Array.from({length: 30}, (_, index) => index + 1);
  
-
-
   return (
     <div className="datepicker">
         <div className={`hidden-component ${isVisible ? 'visible' : ''}`}>
@@ -62,4 +60,4 @@ const HiddenComponent = () => {
   );
 };
 
-export default HiddenComponent;
+export default LeftSideBar;

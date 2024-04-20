@@ -2,13 +2,14 @@
 /* hidden component  */
 .hidden-component {
     position: fixed;
-    left: -300px; /* Initially hide it on the left side */
+    left: -335px; /* Initially hide it on the left side */
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
-    transition: left 0.5s ease-in-out;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
   }
   
   .hidden-component.visible {
@@ -18,7 +19,7 @@
   .toggle-arrow {
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -30px;
     transform: translateY(-50%);
     cursor: pointer;
   }
