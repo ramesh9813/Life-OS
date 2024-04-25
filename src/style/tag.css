@@ -1,0 +1,25 @@
+.tag-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .tag-container label {
+    margin-right: 10px;
+  }
+  
+  .tag-container select, 
+  .tag-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .tag-container select {
+    margin-right: 5px;
+  }
+  
+  .tag-container input[type="text"] {
+    width: 150px;
+  }
+  

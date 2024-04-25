@@ -11,12 +11,10 @@ function App() {
  
   return (
     <>
-      <Header/>
       <LeftSideBar/>
       <RightSideBar/>
       <DayPicker/>    
       <TaskList/>
-      <Footer/>
     </>
   )
 }

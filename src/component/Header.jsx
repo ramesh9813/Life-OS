@@ -8,21 +8,24 @@ const Header = () => {
 
   return (
    <div className="header-container">
-
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+   <nav className="navbar navbar-expand-lg navbar-primary bg-light">
+    <a className="navbar-brand" href="#">Navbar</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <form class="form-inline my-4 my-lg-0 d-flex ">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search"/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      
+      <div className="collapse navbar-collapse ms-4 search-bar" id="navbarTogglerDemo02">
+        <form className="form-inline my-4 my-lg-0 d-flex ">
+          <input className="form-control mr-sm-2 input" type="search" placeholder="Search"/>
+          <button className="btn btn-outline-primary my-2 my-sm-0 ms-2" type="submit">Search</button>
         </form>
-        <Link to="/login" className='btn btn-outline-primary'>
+      </div>
+      <div className='d-flex me-3'>
+        <div className="login">
+        {/* <Link to="/login" className='btn btn-outline-primary my-2 my-sm-0 me-3 login-btn'>
             Login
-        </Link>
-         
+        </Link> */}
+        </div>
         <Profile/>
       </div>
     </nav>

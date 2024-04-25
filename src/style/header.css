@@ -8,3 +8,19 @@
     background-color: red;
     
 }
+
+.login-btn,.search-bar{
+    height:5vh;
+}
+.search-bar .input{
+    width:900px;
+    height: 100%;
+}
+.login{
+    display: flex;
+    justify-content: center; /* horizontally center the content */
+    align-items: center; 
+
+}
+
+ 

@@ -3,7 +3,9 @@ import '../style/footer.css';
 
 const Footer = () => {
   return (
+    
     <footer className="footer">
+      <hr />
       <div className="footer-content">
         <hr />
         <p>© 2024 Your Company Name. All rights reserved.</p>

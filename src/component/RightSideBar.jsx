@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../style/rightsidebar.css'
+import BarChart from './BarChart';
 
 const RightSideBar = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,14 +12,17 @@ const RightSideBar = () => {
   return (
     <div className={`sidebar ${isVisible ? 'open' : ''}`}>
       <div className="toggle-button" onClick={toggleVisibility}>
-            {isVisible ? '❌' : '⬅️'}
+            {isVisible ? <i class="bi bi-arrow-bar-right h3"></i> : <i class="bi bi-arrow-bar-left h3"></i>}
         </div>
       <div className="content">
         <div className="grid-container">
-          <div className="grid-item bar-chart">Bar Chart</div>
-          <div className="grid-item pie-chart">Pie Chart</div>
-          <div className="grid-item report">Report</div>
+        <div className="grid-item report">Report</div>
           <div className="grid-item other">Other</div>
+          <div className="grid-item bar-chart">
+            <BarChart/>
+          </div>
+          <div className="grid-item pie-chart">Pie Chart</div>
+          
         </div>
       </div>
       
