@@ -19,7 +19,7 @@ const LeftSideBar = () => {
     <div className="datepicker">
         <div className={`hidden-component ${isVisible ? 'visible' : ''}`}>
         <div className="toggle-arrow" onClick={toggleVisibility}>
-            {isVisible ? <i class="bi bi-arrow-bar-left h3"></i> : <i class="bi bi-arrow-bar-right h3"></i>}
+            {isVisible ? <i className="bi bi-arrow-bar-left h3"></i> : <i className="bi bi-arrow-bar-right h3"></i>}
         </div>
         <div className="content">
             {/* Your content goes here */}

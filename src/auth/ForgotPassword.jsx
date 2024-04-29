@@ -6,10 +6,8 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState('');
 
   const handleResetPassword = () => {
-    // Here you can add your logic to handle password reset
-    // For simplicity, let's just display an alert
     alert('Password reset instructions sent to your email.');
-    setEmail(''); // Clear the email field after resetting
+    setEmail('');  
   };
 
   return (

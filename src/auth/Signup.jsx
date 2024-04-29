@@ -11,12 +11,11 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add your logic to handle form submission, like sending data to a server
     console.log({ email, fullName, address, sex, dob });
   };
 
   return (
-    <div class="signup-container">
+    <div className="signup-container">
     <h3>Sign Up</h3>
     <form onSubmit={handleSubmit}>
         <label>
